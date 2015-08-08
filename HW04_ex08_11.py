@@ -13,7 +13,11 @@
 # Body
 
 def any_lowercase1(s):
-    """Explain what is wrong, if anything, here.
+    """This function only checks whether the string's first character is 
+        lowercase. This could be better served by having a break statement 
+        after the return True, and then have the return False outside the 
+        for loop. As is, it will only run through the first letter and 
+        either return True or False.
     """
     for c in s:
         if c.islower():
@@ -22,7 +26,10 @@ def any_lowercase1(s):
             return False
 
 def any_lowercase2(s):
-    """Explain what is wrong, if anything, here.
+    """This doesn't actually use the variable c, but rather creates a new
+        string to test that is 'c'. It will always be True b/c it is lowercase.
+        Also it returns a string rather than a boolean, so depending what your
+        purpose is, that could present a problem.
     """
     for c in s:
         if 'c'.islower():
@@ -31,14 +38,16 @@ def any_lowercase2(s):
             return 'False'
 
 def any_lowercase3(s):
-    """Explain what is wrong, if anything, here.
+    """flag will just end up being the last character of the string, so it
+        won't actually tell you if any other letters are lowercase in the string.
     """
     for c in s:
         flag = c.islower()
     return flag
 
 def any_lowercase4(s):
-    """Explain what is wrong, if anything, here.
+    """This one works, because it uses the or statement. So as soon as it's
+        True, it stays True, and returns that value.
     """
     flag = False
     for c in s:
@@ -46,7 +55,10 @@ def any_lowercase4(s):
     return flag
 
 def any_lowercase5(s):
-    """Explain what is wrong, if anything, here.
+    """This one is saying 'if not True, return False, otherwise return True.'
+        It's not working with spaces, since they're not lowercase. When it hits
+        a space, it returns False. It also returns false at the first uppercase
+        letter.
     """
     for c in s:
         if not c.islower():
@@ -60,7 +72,10 @@ def main():
     # call that function with a string for which the function returns
     # incorrectly.
     # ex.: any_lowercase_("thisstringmessesupthefunction")
-    print("Hello World!")
+    any_lowercase1("CAPS in the beginning")
+    any_lowercase2("Cats")
+    any_lowercase3("capital letter at the enD")
+    any_lowercase5("TRYthis")
     
 
 if __name__ == '__main__':

@@ -21,17 +21,28 @@
 
 ################################################################################
 # Imports
-
+import math
 
 # Body
+def eval_loop():
+	y = None
+	x = raw_input(
+			"Enter an expression to evaluate. Type 'done' to quit.\n")
+	while x != 'done':
+		y = eval(x)
+		print eval(x) 	# how can we correctly handle float division here?
+		x = raw_input(
+			"Enter an expression to evaluate. Type 'done' to quit.\n")
+	return y
 
+
+		
 
 
 
 ################################################################################
 def main():
-    pass # Remove this line and uncomment below once eval_loop is defined.
-    # eval_loop()
+    eval_loop()
     
 
 if __name__ == '__main__':

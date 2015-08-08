@@ -19,16 +19,21 @@
 
 
 # Body
-
+def count(s, l):
+	x = 0
+	for letter in s:
+		if letter == l:
+			x = x + 1
+	print x
 
 
 
 ################################################################################
 def main():
 
-    # Remove print("Hello World!") and add several functions calls to count()
-    # below, passing various strings and letters
-    print("Hello World!") 
+	count("Whoops!", "o")
+	count("Mississippi", "i")
+	count("Alabama", "m")
     
 
 if __name__ == '__main__':
