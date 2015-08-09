@@ -50,8 +50,8 @@ def not_bad(s):
 def front_back(a, b):
   a_odd = len(a) % 2                  # if odd, this will add 1 later on
   b_odd = len(b) % 2
-  a_front = a[: len(a) / 2 + a_odd]   # floor division is good for something!
-  b_front = b[: len(b) / 2 + b_odd]
+  a_front = a[:len(a) / 2 + a_odd]   # floor division is good for something!
+  b_front = b[:len(b) / 2 + b_odd]
   a_back = a[len(a) / 2 + a_odd :]
   b_back = b[len(b)/2 + b_odd :]
   return a_front + b_front + a_back + b_back
